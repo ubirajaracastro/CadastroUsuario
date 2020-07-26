@@ -12,6 +12,7 @@ using System.Data.Entity.Infrastructure;
 
 namespace CadastroUsuario.Controllers
 {
+    [Authorize]
     public class UsuarioController : ApiController
     {
         private meuBanco db = new meuBanco();
