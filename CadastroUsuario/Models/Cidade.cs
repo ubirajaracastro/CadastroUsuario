@@ -24,10 +24,7 @@ namespace CadastroUsuario.Models
 
         [Column(TypeName = "VARCHAR")]
         [StringLength(8, ErrorMessage = "Tamanho Inválido", MinimumLength = 8)]
-        public string cep_cidade { get; set; }
-
-        public string Endereco { get; set; }
-
+        public string cep_cidade { get; set; }       
 
         public IEnumerable<Usuario> usuarios { get; set; }
     }
