@@ -34,12 +34,10 @@ namespace CadastroUsuario
                 );
 
             app.UseCors(CorsOptions.AllowAll);
+
+            //ativando geracao de token
+            AtivarToken(app);
             app.UseWebApi(config);
-
-
-
-
-
         }
 
         private void AtivarToken(IAppBuilder app)
@@ -48,9 +46,8 @@ namespace CadastroUsuario
 
             {
                 AllowInsecureHttp = true,
-                AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(20),
-                TokenEndpointPath = new PathString("token"),
-                Provider = new ProviderTokenAcesso()
+                AccessTokenExpireTimeSpan = TimeSpan.FromHours(60),
+                TokenEndpointPath = new PathString("/token"), Provider = new ProviderTokenAcesso()
 
             };
 

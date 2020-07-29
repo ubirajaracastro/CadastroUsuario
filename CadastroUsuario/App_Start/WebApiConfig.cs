@@ -16,7 +16,7 @@ namespace CadastroUsuario
             config.MapHttpAttributeRoutes();
 
             //json
-            config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
+            config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/json"));
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

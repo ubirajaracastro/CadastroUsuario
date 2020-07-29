@@ -10,13 +10,15 @@ namespace CadastroUsuario.Service
 {
     public class ProviderTokenAcesso:OAuthAuthorizationServerProvider
     {
-        public override async Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
+        public override Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
         {
-            context.Validated();
+             context.Validated();
+
+            return base.ValidateClientAuthentication(context);
         }
 
 
-        public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
+        public override Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
             if (UsuarioAutenticacao.Login(context.UserName, context.Password))
             {
@@ -32,7 +34,7 @@ namespace CadastroUsuario.Service
             }
 
 
-            return;
+            return base.GrantResourceOwnerCredentials(context);
         }
     }
 }
