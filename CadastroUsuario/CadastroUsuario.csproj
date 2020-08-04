@@ -205,9 +205,14 @@
     <Compile Include="Migrations\202007250231384_IncluirPKTabelaUsuariosSistemas.designer.cs">
       <DependentUpon>202007250231384_IncluirPKTabelaUsuariosSistemas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008032319003_CampoSexoTabelaUsuario.cs" />
+    <Compile Include="Migrations\202008032319003_CampoSexoTabelaUsuario.designer.cs">
+      <DependentUpon>202008032319003_CampoSexoTabelaUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cidade.cs" />
     <Compile Include="Models\meuBanco.cs" />
+    <Compile Include="Models\RootObject.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\UsuarioSistema.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -307,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007250231384_IncluirPKTabelaUsuariosSistemas.resx">
       <DependentUpon>202007250231384_IncluirPKTabelaUsuariosSistemas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008032319003_CampoSexoTabelaUsuario.resx">
+      <DependentUpon>202008032319003_CampoSexoTabelaUsuario.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

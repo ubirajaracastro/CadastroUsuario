@@ -32,5 +32,8 @@ namespace CadastroUsuario.Models
 
         public Cidade cidade { get; set; }
         public int cod_cidade { get; set; }
+
+        [Column(TypeName = "CHAR")]
+        public string Sexo { get; set; }
     }
 }

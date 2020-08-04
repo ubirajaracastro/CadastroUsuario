@@ -20,7 +20,7 @@ namespace CadastroUsuario.Controllers
         // GET: api/Usuarios
         public IQueryable<Usuario> Getusuarios()
         {
-            return db.usuarios;
+            return db.usuarios.Include("Cidade");
         }
 
         // GET: api/Usuarios/5
